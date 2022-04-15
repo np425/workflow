@@ -1,1 +1,1 @@
-Linux Sway + other dotfiles based on Garuda Linux
+Linux Sway + other dotfiles & settings based on Garuda Linux
