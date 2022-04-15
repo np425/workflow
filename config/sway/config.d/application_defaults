@@ -1,0 +1,83 @@
+# Assign workspaces
+assign [app_id="obsidian"] 1
+assign [class="obsidian"] 1
+
+assign [app_id="firefox"] 2
+assign [class="firefox"] 2
+
+assign [app_id="firedragon"] 2
+assign [class="firedragon"] 2
+
+# Visual Studio Code
+assign [app_id="code"] 3
+assign [class="code"] 3
+
+# Intellij IDEs
+assign [app_id="pycharm"] 4
+assign [class="pycharm"] 4
+
+assign [app_id="clion"] 4
+assign [class="clion"] 4
+
+assign [app_id="intellij"] 4
+assign [class="intellij"] 4
+
+assign [app_id="discord"] 5
+assign [class="discord"] 5
+assign [app_id="Discord"] 5
+assign [class="Discord"] 5
+for_window [class="discord"] move to workspace 5
+
+assign [app_id="clementine"] 10
+assign [class="clementine"] 10
+assign [class="Clementine"] 10
+
+assign [app_id="spotify"] 10
+assign [class="spotify"] 10
+assign [class="Spotify"] 10
+for_window [class="Spotify"] move to workspace 10
+
+# set floating (nontiling)for apps needing it:
+for_window [class="Yad" instance="yad"] floating enable
+for_window [app_id="yad"] floating enable
+for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
+
+# set floating (nontiling) for special apps:
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [app_id="pavucontrol" ] floating enable, resize set width 40 ppt height 30 ppt
+for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60 ppt height 50 ppt
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
+for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
+
+# set floating for window roles
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="firedragon" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
+for_window [title="Picture in picture"] floating enable, sticky enable
+for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
+for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [app_id="xsensors"] floating enable
+for_window [title="Save File"] floating enable
+for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
+
+# Inhibit idle
+for_window [app_id="firedragon"] inhibit_idle fullscreen
+for_window [app_id="Chromium"] inhibit_idle fullscreen
+
+# Fullscreen
+for_window [app_id="obsidian"] fullscreen
+for_window [class="obsidian"] fullscreen
+for_window [app_id="clementine"] fullscreen
+for_window [class="clementine"] fullscreen
+for_window [app_id="firedragon"] fullscreen
+for_window [class="firedragon"] fullscreen
+for_window [app_id="spotify"] fullscreen
+for_window [class="Spotify"] fullscreen

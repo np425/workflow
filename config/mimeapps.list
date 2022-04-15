@@ -1,0 +1,12 @@
+[Added Associations]
+text/plain=org.gnome.gedit.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-BOXFK1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-BOXFK1.desktop;
+text/markdown=visual-studio-code.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-BOXFK1.desktop
+message/rfc822=userapp-Thunderbird-BOXFK1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-BOXFK1.desktop
