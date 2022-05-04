@@ -58,11 +58,11 @@ colors:
     white: '#aeb3bb'
 key_bindings:
     - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
-window.opacity: 1.00
 window:
   padding:
     x: 20
     y: 20
+  opacity: 1.00
 font:
   normal:
     family: JetbrainsMonoNL

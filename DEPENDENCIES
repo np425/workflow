@@ -1,0 +1,48 @@
+# Audio
+pavucontrol
+playerctl
+pamixer
+
+# Terminal applications
+ranger
+vim
+
+# Terminal Prompt
+fish
+mcfly
+bar
+find-the-command
+
+# Display Manager
+greetd
+greetd-qtgreeter
+
+# Desktop Environment
+sway
+swaybg
+swayidle
+waybar
+mako
+wofi
+
+# Development Applications
+visual-studio-code-bin
+jetbrains-toolbox
+github-desktop
+
+# Syncing Applications
+megasync (https://mega.io/desktop)
+syncthing
+
+# Online Media & Communication Applications
+discord
+spotify
+thunderbird
+firefox
+
+# Note Taking Applications
+obsidian
+
+# Other Applications
+keepassxc
+
