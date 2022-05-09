@@ -11,7 +11,45 @@ vim
 fish
 mcfly
 bar
-find-the-command
+find-the-command-git
+exa
+starship
+bat
+fish-autopair
+fzf
+nerd-fonts-fantasque-sans-mono
+pkgfile
+tealdear
+
+# Utilities
+jq
+gnome-keyring
+gvfs
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
+wtype
+powertop
+atop
+glances
+dateutils
+btop
+
+# Fonts
+otf-font-awesome
+ttf-jetbrains-mono
+ttf-ubuntu-font-family
+otf-font-awesome-4
+terminus-font            
+noto-fonts               
+noto-fonts-cjk           
+noto-fonts-emoji         
+ttf-dejavu
+ttf-fantasque-sans-mono
+ttf-fira-sans
+ttf-liberation
+ttf-opensans
+noto-color-emoji-fontconfig
 
 # Display Manager
 greetd
@@ -24,11 +62,36 @@ swayidle
 waybar
 mako
 wofi
+xorg-xwayland
+capitaine-cursors
+gtk-engine-murrine
+kvantum-qt5
+kvantum-theme-nordic-git
+nordic-darker-theme
+qt5ct
+tela-circle-icon-theme-git
+swayr
+slurp
+nwg-launchers
+nwg-drawer
+bemenu-wlroots
+wl-clipboard
+light
+wob
+autotiling
+clipman
+wf-recorder
+dex
 
-# Development Applications
+# Development
 visual-studio-code-bin
 jetbrains-toolbox
 github-desktop
+zeal
+g++
+gcc
+gdb
+cmake
 
 # Syncing Applications
 megasync (https://mega.io/desktop)
@@ -42,7 +105,16 @@ firefox
 
 # Note Taking Applications
 obsidian
+anki
 
 # Other Applications
 keepassxc
-
+dconf-editor
+gedit
+gedit-plugins
+gparted
+gnome-disk-utility
+gnome-calculator
+gnome-logs
+gnome-system-monitor
+bleachbit
