@@ -17,7 +17,7 @@ set $menu wofi -c ~/.config/wofi/config -I
 
 set $launcher nwg-drawer -c 7 -is 70 -spacing 23
 
-set $powermenu nwgbar
+set $powermenu nwg-bar
 
 set $cheat gedit ~/.config/sway/cheatsheet
 
