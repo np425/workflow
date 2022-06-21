@@ -137,9 +137,9 @@ alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/p
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
 # Help people new to Arch
-alias apt='man pacman'
-alias apt-get='man pacman'
-alias please='sudo'
+#alias apt='man pacman'
+#alias apt-get='man pacman'
+#alias please='sudo'
 alias tb='nc termbin.com 9999'
 
 # Cleanup orphaned packages
@@ -153,6 +153,6 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 
 ## Run neofetch if session is interactive
-if status --is-interactive && type -q neofetch
-   neofetch
-end
+#if status --is-interactive && type -q neofetch
+#   neofetch
+#end

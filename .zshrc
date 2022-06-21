@@ -231,4 +231,4 @@ alias upd="/usr/bin/update"
 
 
 ## Run neofetch
-neofetch
+# neofetch
