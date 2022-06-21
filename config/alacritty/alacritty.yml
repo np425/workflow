@@ -15,7 +15,7 @@
 
 colors:
   primary:
-    background: '0x1d2021'
+    background: '#1c1c1c'
     foreground: '0xebdbb2'
     dim_foreground: '#282c34'
   cursor:
@@ -65,14 +65,14 @@ key_bindings:
     - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
 window:
   padding:
-    x: 20
-    y: 20
+    x: 5
+    y: 3
   opacity: 1.00
 font:
   normal:
     family: 'Comic Code Ligatures'
     style: 'Regular'
-  size: 12
+  size: 11.5
 live_config_reload: true
 dynamic_padding: true
 shell:
