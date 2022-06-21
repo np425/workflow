@@ -34,6 +34,6 @@ export BEMENU_BACKEND=wayland
 #export SDL_VIDEODRIVER=wayland	         # this can prevent programs from starting old sdl games. therefore, this should be set per app instead of globally.
 
 # Qt
-#export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORM=wayland
 #export QT_WAYLAND_FORCE_DPI=physical
 #export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
