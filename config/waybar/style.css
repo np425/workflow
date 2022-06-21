@@ -53,7 +53,7 @@ nord15 #b48ead
    }
 
 window#waybar {
-    background: transparent;
+    background: transparent; 
     /* background: rgba(46, 52, 64, 0.05); */
     /* background: #2e344001; */
 }
