@@ -16,6 +16,8 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_italic=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+set termguicolors
+
 autocmd vimenter * ++nested colorscheme gruvbox
 
 syntax on
