@@ -67,7 +67,6 @@ window:
   padding:
     x: 5
     y: 9
-  opacity: 1.00
 font:
   normal:
     family: 'Comic Code Ligatures'
