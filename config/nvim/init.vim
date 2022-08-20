@@ -1,13 +1,14 @@
 set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf'
 
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
 set background=dark
@@ -18,7 +19,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 set termguicolors
 
-autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme gruvbox
 
 syntax on
 
