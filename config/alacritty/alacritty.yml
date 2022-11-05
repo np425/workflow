@@ -21,10 +21,11 @@ key_bindings:
 font:
   normal:
     family: "Comic Code Ligatures Nerd Font"
-    style: "Regular"
-  size: 12
+  size: 11
+  offset:
+    y: 3
 live_config_reload: true
-dynamic_padding: false
+dynamic_padding: true
 shell:
   program: /bin/fish
 env:
