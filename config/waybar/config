@@ -4,8 +4,8 @@
     "height": 30,
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["custom/pacman", "backlight", "custom/keyboard-layout", "cpu", "memory", "battery", "network", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["custom/pacman", "tray", "pulseaudio", "custom/keyboard-layout", "clock"], 
     
  // Modules configuration
  
@@ -25,7 +25,7 @@
         }
     },
     "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        "format": "{}"
     },
     "sway/window": {
         "format": "{}"
@@ -43,9 +43,9 @@
     },
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
+        "format": "{:%a %d %b %I:%M %p}",	//12 hour format
         //"format": " {:%a %d %b  %H:%M}",	//24 hour format
-        "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+        "format-alt": "{:%d/%m/%Y %H:%M:%S}",
         //"timezones": [ "Kolkata" ],
         //"max-length": 200
         "interval": 1
@@ -94,9 +94,9 @@
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-muted":"muted ",
+        "format": "{volume}%",
+        "format-bluetooth": "{volume}%",
+        "format-muted":"muted",
         "format-icons": {
             "headphones": "",
             "handsfree": "",
@@ -109,7 +109,7 @@
         "on-click": "pavucontrol"
     },
    "custom/pacman": {
-        "format": " {}",
+        "format": "{}",
         "interval": 7200,                     // every two hours
         "exec": "checkupdates | wc -l",       // # of updates
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
@@ -125,7 +125,7 @@
       	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
       	// Interval set only as a fallback, as the value is updated by signal
       	"interval": 30,
-      	"format": "  {}", // Icon: keyboard
+      	"format": "{}", // Icon: keyboard
       	// Signal sent by Sway key binding (~/.config/sway/key-bindings)
       	"signal": 1, // SIGHUP
       	"tooltip": false,

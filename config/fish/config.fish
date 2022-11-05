@@ -4,6 +4,16 @@ set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+# TODO: Refactor fish file
+# bat theme
+set -x BAT_THEME Catppuccin-mocha
+
+# fzf theme
+set -Ux FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
    set -x QT_QPA_PLATFORMTHEME "qt5ct"
@@ -32,6 +42,11 @@ if test -d ~/Applications/depot_tools
     if not contains -- ~/Applications/depot_tools $PATH
         set -p PATH ~/Applications/depot_tools
     end
+end
+
+# Add ruby gems to PATH
+if not contains -- ~/.local/share/gem/ruby/3.0.0/bin $PATH
+    set -p PATH ~/.local/share/gem/ruby/3.0.0/bin
 end
 
 
@@ -157,3 +172,6 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 #if status --is-interactive && type -q neofetch
 #   neofetch
 #end
+
+# Zoxide
+zoxide init fish | source

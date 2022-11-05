@@ -3,20 +3,20 @@
 [username]
 format = " [╭─$user]($style)@"
 show_always = true
-style_root = "bold red"
-style_user = "bold red"
+style_root = "bold #f38ba8"
+style_user = "bold #f9e2af"
 
 # Second param
 [hostname]
 disabled = false
 format = "[$hostname]($style) in "
 ssh_only = false
-style = "bold dimmed red"
+style = "#f5e0dc"
 trim_at = "-"
 
 # Third param
 [directory]
-style = "purple"
+style = "underline #f2cdcd"
 truncate_to_repo = true
 truncation_length = 0
 truncation_symbol = "repo: "
@@ -31,14 +31,14 @@ ahead = "⇡${count}"
 behind = "⇣${count}"
 deleted = "x"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-style = "white"
+style = "#cba6f7"
 
 # Last param in the first line/row
 [cmd_duration]
 disabled = false
 format = "took [$duration]($style)"
 min_time = 1
-
+style = "#89b4fa"
 
 ## SECOND LINE/ROW: Prompt
 # Somethere at the beginning
@@ -72,16 +72,16 @@ time_format = "%T"
 
 # Prompt: param 2
 [character]
-error_symbol = " [×](bold red)"
-success_symbol = " [╰─λ](bold red)"
+error_symbol = " [×](bold #f38ba8)"
+success_symbol = " [╰─λ](bold #f9e2af)"
 
 # SYMBOLS
 [status]
-disabled = false
-format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+disabled = true
+format = '[$symbol$status_common_meaning$status_signal_name$status_maybe_int]($style)'
 map_symbol = true
 pipestatus = true
-symbol = "🔴"
+symbol = "ツ"
 
 [aws]
 symbol = " "

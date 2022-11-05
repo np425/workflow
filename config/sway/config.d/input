@@ -13,7 +13,7 @@ input type:touchpad {
 # Read `man 5 sway-input` for more information about this section.
 #
 input * {
-	xkb_layout gb,lt,de
+	xkb_layout us,lt,de
 	xkb_options grp:rshift_toggle
 }
 

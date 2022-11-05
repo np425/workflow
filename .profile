@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=firedragon
 export TERM=alacritty
 export MAIL=geary

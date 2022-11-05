@@ -1,14 +1,21 @@
 anchor=bottom-right
-background-color=#282828
-text-color=#ebdbb2
 width=350
 margin=0,20,20
 padding=10
 border-size=2
-border-color=#282828
 border-radius=5
 default-timeout=5000
 group-by=summary
+
+# Colors
+
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
+
+[urgency=high]
+border-color=#fab387
 
 [grouped]
 format=<b>%s</b>\n%b

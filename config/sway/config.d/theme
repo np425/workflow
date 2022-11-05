@@ -2,17 +2,17 @@
 exec_always ~/.config/sway/scripts/import-gsettings
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 5
+gaps inner 0
+gaps outer 0
 
 # Hide titlebar on windows: 
-default_border pixel 1
+default_border pixel 0
 
 # Default Font
-font pango:Noto Sans Regular 10
+font pango:JetbrainsMonoNL 10
 
 # Thin borders:
-smart_borders on
+smart_borders off
 
 # Set wallpaper:
 exec $HOME/.config/bg
@@ -23,7 +23,7 @@ for_window [shell="x_wayland"] title_format "%class - %title"
 
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
-client.focused          #88c0d0 #434c5e #eceff4 #8fbcbb   #88c0d0
+client.focused          #fab387 #434c5e #eceff4 #8fbcbb   #fab387
 client.focused_inactive #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
 client.unfocused        #88c0d0 #2e3440 #d8dee9 #4c566a   #4c566a
 client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
