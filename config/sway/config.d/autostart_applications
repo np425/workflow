@@ -1,14 +1,10 @@
-# Desktop notifications
-exec mako
-
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-     
-# Wob
-exec mkfifo $SWAYSOCK.wob
-exec tail -f $SWAYSOCK.wob | wob --border-color '#89b4fa' --background-color '#cc3a3aFF' --bar-color '#fab387'
+
+# Desktop notifications
+exec mako
 
 # Autotiling
 exec autotiling
@@ -19,7 +15,7 @@ exec ~/.config/sway/scripts/light.sh
 # nm-applet
 exec nm-applet --indicator
 
-# Welcome
+# Autostart external
 exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 
 # Clipman
