@@ -19,7 +19,8 @@
 }
 
 window#waybar {
-  background: @base;
+  background: @base; 
+  /* background: transparent; */
 }
 
 #workspaces button {

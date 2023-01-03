@@ -3,11 +3,12 @@ pavucontrol
 playerctl
 pamixer
 
-# Terminal applications
+# Terminal
+alacritty
 ranger
 vim
 
-# Terminal Prompt
+# Shell
 fish
 mcfly
 bar

@@ -1,8 +1,10 @@
--- TODO: Setup nerd tree shortcuts
---
 -- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+
+-- convenient netrw shortcut
+vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- line numbers
 vim.opt.number = true
@@ -16,11 +18,25 @@ vim.opt.expandtab = true
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-require('ensure_packer')()
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-
+  -- My plugins here
+  -- use 'foo1/bar1.nvim'
+  -- use 'foo2/bar2.nvim'
+  --
   use {
 	-- color scheme
 	"catppuccin/nvim",
@@ -28,14 +44,14 @@ require('packer').startup(function(use)
 	config = function()
 		require("catppuccin").setup({
 	        flavour = "mocha", -- latte, frappe, macchiato, mocha
-            background = { light = "latte", dark = "mocha" }
+            background = { light = "latte", dark = "mocha" },
+            transparent_background = true
        	})
         vim.cmd.colorscheme "catppuccin"
 	end
   }
-  
-  -- todo highlight
-  use { 
+
+  use {
       "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
         config = function()
@@ -47,24 +63,47 @@ require('packer').startup(function(use)
     end
   }
 
-  -- latex
   use {
-      'lervag/vimtex',
-      config = function()
-        vimtex_view_method = 'zathura'
-        vimtex_compiler_method = 'latexrun'
-    end
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- file explorer
-  use {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional, for file icons
-  },
-  config = function()
-    require('nvim-tree').setup()
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate' })
+
+  use('tpope/vim-fugitive')
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
   end
+
+  use {
+      'VonHeikemen/lsp-zero.nvim',
+      requires = {
+          -- LSP Support
+          {'neovim/nvim-lspconfig'},
+          {'williamboman/mason.nvim'},
+          {'williamboman/mason-lspconfig.nvim'},
+
+          -- Autocompletion
+          {'hrsh7th/nvim-cmp'},
+          {'hrsh7th/cmp-buffer'},
+          {'hrsh7th/cmp-path'},
+          {'saadparwaiz1/cmp_luasnip'},
+          {'hrsh7th/cmp-nvim-lsp'},
+          {'hrsh7th/cmp-nvim-lua'},
+
+          -- Snippets
+          {'L3MON4D3/LuaSnip'},
+          {'rafamadriz/friendly-snippets'},
+    }
 }
 end)
+
+require("after.plugin.fugitive")
+require("after.plugin.lsp")
+require("after.plugin.telescope")
+require("after.plugin.treesitter")
 

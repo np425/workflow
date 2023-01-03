@@ -28,3 +28,5 @@ for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
 
 # Inhibit idle
 for_window [app_id="firedragon"] inhibit_idle 
+
+for_window [instance="origin.exe"] floating enable

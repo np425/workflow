@@ -34,4 +34,8 @@ client.urgent           #89b4fa #1e1e2e #cdd6f4 #cba6f7 #89b4fa
 # Read `man 5 sway-bar` for more information about this section.
 bar {
    swaybar_command waybar
+   position top
+   hidden_state hide
+   mode hide
+   modifier Mod4
 }
