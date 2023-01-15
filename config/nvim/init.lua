@@ -108,10 +108,10 @@ require("after.plugin.telescope")
 require("after.plugin.treesitter")
 
 -- folding
-local vim = vim
-local opt = vim.opt
-local api = vim.api
+--local vim = vim
+--local opt = vim.opt
+--local api = vim.api
 
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
+--opt.foldmethod = "expr"
+--opt.foldexpr = "nvim_treesitter#foldexpr()"
 
