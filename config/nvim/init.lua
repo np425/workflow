@@ -43,13 +43,21 @@ require('packer').startup(function(use)
 	as = "cattpuccin",
 	config = function()
 		require("catppuccin").setup({
-	        flavour = "mocha", -- latte, frappe, macchiato, mocha
-            background = { light = "latte", dark = "mocha" },
+	        flavour = "macchiato", -- latte, frappe, macchiato, mocha
+            background = { light = "latte", dark = "frappe" },
             transparent_background = true
        	})
         vim.cmd.colorscheme "catppuccin"
 	end
   }
+
+  --[[use {
+      "sainnhe/everforest",
+      as = "everforest",
+      config = function()
+        vim.cmd.colorscheme "everforest"
+      end
+  }--]]
 
   use {
       "folke/todo-comments.nvim",
@@ -108,10 +116,13 @@ require("after.plugin.telescope")
 require("after.plugin.treesitter")
 
 -- folding
---local vim = vim
---local opt = vim.opt
---local api = vim.api
+local vim = vim
+local opt = vim.opt
+local api = vim.api
 
 --opt.foldmethod = "expr"
 --opt.foldexpr = "nvim_treesitter#foldexpr()"
 
+opt.foldmethod="expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = false

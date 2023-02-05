@@ -25,3 +25,13 @@ lsp.setup_nvim_cmp({
 lsp.nvim_workspace()
 
 lsp.setup()
+
+-- Errors in line
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = false,
+    underline = true,
+    severity_sort = false,
+    float = true
+})

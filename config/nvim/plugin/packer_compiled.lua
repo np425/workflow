@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   cattpuccin = {
-    config = { "\27LJ\2\nº\1\0\0\4\0\t\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\1\0B\0\2\1K\0\1\0\16colorscheme\bcmd\bvim\15background\1\0\2\nlight\nlatte\tdark\nmocha\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0" },
+    config = { "\27LJ\2\n¿\1\0\0\4\0\t\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\1\0B\0\2\1K\0\1\0\16colorscheme\bcmd\bvim\15background\1\0\2\tdark\vfrappe\nlight\nlatte\1\0\2\fflavour\14macchiato\27transparent_background\2\nsetup\15catppuccin\frequire\0" },
     loaded = true,
     path = "/home/np/.local/share/nvim/site/pack/packer/start/cattpuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -174,14 +174,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: cattpuccin
+time([[Config for cattpuccin]], true)
+try_loadstring("\27LJ\2\n¿\1\0\0\4\0\t\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\1\0B\0\2\1K\0\1\0\16colorscheme\bcmd\bvim\15background\1\0\2\tdark\vfrappe\nlight\nlatte\1\0\2\fflavour\14macchiato\27transparent_background\2\nsetup\15catppuccin\frequire\0", "config", "cattpuccin")
+time([[Config for cattpuccin]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
--- Config for: cattpuccin
-time([[Config for cattpuccin]], true)
-try_loadstring("\27LJ\2\nº\1\0\0\4\0\t\0\0146\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0009\0\b\0'\2\1\0B\0\2\1K\0\1\0\16colorscheme\bcmd\bvim\15background\1\0\2\nlight\nlatte\tdark\nmocha\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0", "config", "cattpuccin")
-time([[Config for cattpuccin]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
