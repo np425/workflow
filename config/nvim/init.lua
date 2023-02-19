@@ -1,6 +1,6 @@
 -- disable netrw
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- convenient netrw shortcut
 vim.g.mapleader = " "
@@ -45,7 +45,16 @@ require('packer').startup(function(use)
 		require("catppuccin").setup({
 	        flavour = "macchiato", -- latte, frappe, macchiato, mocha
             background = { light = "latte", dark = "frappe" },
-            transparent_background = true
+            transparent_background = true,
+            integrations = {
+                markdown = true,
+                mason = true,
+                cmp = true,
+                nvimtree = true,
+                telescope = true,
+                treesitter = true,
+                treesitter_context = true,
+            }
        	})
         vim.cmd.colorscheme "catppuccin"
 	end
@@ -75,6 +84,23 @@ require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim', tag = '0.1.0',
       -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly', -- optional, updated every week. (see issue #1193)
+      config = function()
+        -- empty setup using defaults
+        require("nvim-tree").setup()
+      end
+  }
+
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate' })
@@ -114,6 +140,12 @@ require("after.plugin.fugitive")
 require("after.plugin.lsp")
 require("after.plugin.telescope")
 require("after.plugin.treesitter")
+
+require('lualine').setup({
+    options = {
+        theme = "catppuccin"
+    }
+})
 
 -- folding
 local vim = vim
