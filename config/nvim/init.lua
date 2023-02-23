@@ -47,6 +47,7 @@ require('packer').startup(function(use)
             background = { light = "latte", dark = "frappe" },
             transparent_background = true,
             integrations = {
+                aerial = true,
                 markdown = true,
                 mason = true,
                 cmp = true,
@@ -103,6 +104,11 @@ require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  use {
+      'stevearc/aerial.nvim',
+      config = function() require('aerial').setup() end
+  }
+
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate' })
 
   use('tpope/vim-fugitive')
@@ -133,6 +139,7 @@ require('packer').startup(function(use)
           {'L3MON4D3/LuaSnip'},
           {'rafamadriz/friendly-snippets'},
     }
+
 }
 end)
 
@@ -143,14 +150,14 @@ require("after.plugin.treesitter")
 
 require('lualine').setup({
     options = {
-        theme = "catppuccin"
+        theme = "catppuccin",
+        globalstatus = true
     }
 })
 
 -- folding
 local vim = vim
 local opt = vim.opt
-local api = vim.api
 
 --opt.foldmethod = "expr"
 --opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -158,3 +165,4 @@ local api = vim.api
 opt.foldmethod="expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.foldenable = false
+opt.laststatus = 3
